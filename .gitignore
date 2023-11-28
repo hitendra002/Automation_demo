@@ -3,3 +3,11 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/test_reports/
+
+
+# PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
