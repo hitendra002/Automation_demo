@@ -11,3 +11,5 @@ node_modules/
 
 # Visual Studio Code
 .vscode/
+
+__pycache__/
