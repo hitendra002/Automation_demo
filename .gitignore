@@ -3,7 +3,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/test_reports/
+test_reports/*
 
 
 # PyCharm
@@ -12,4 +12,4 @@ node_modules/
 # Visual Studio Code
 .vscode/
 
-__pycache__/
+__pycache__/*
