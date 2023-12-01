@@ -156,8 +156,10 @@ exports.PimPage = class PimPage {
      * @param {string} empID 
      */
     async searchEmplyoeeWithId(empID) {
+        await this.page.waitForLoadState('networkidle')
         await this.emplyoeeIdTextArea.fill(empID)
         await this.searchButton.click()
+        await this.page.waitForLoadState('networkidle')
     }
 
     async viewEmployeeDetails(empID) {
