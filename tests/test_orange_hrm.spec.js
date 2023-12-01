@@ -13,7 +13,7 @@ test.describe("Orange HRM test", async () => {
         await page.close()
     })
 
-    test.only("Add Emplyoee and Verify personal details", async ({ page }) => {
+    test("Add Emplyoee and Verify personal details", async ({ page }) => {
         const loginPage = new LoginPage(page)
         const pim = new PimPage(page)
         const menu = new SidebarMenu(page)
