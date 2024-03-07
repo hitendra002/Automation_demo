@@ -81,7 +81,7 @@ exports.PimPage = class PimPage {
             await this.page.getByRole('option', { name: dataObject.maritalStatus, exact: true }).click();
         }
         // update birthdate
-        await this.page.locator("(//input[@placeholder='yyyy-mm-dd'])[2]").fill(dataObject.birthDate)
+        await this.page.locator("(//input[@placeholder='yyyy-dd-mm'])[2]").fill(dataObject.birthDate)
         // select gender
         await this.page.locator(`//label[text()="${dataObject.gender}"]/span[contains(@class,"oxd-radio-input")]`).check()
         await this.saveButton.first().click()
@@ -199,7 +199,7 @@ exports.PimPage = class PimPage {
         await expect(this.selectTextForLable("Nationality")).toHaveText(dataObject.nationality)
         await expect(this.selectTextForLable("Marital Status")).toHaveText(dataObject.maritalStatus)
         await expect(this.selectTextForLable("Blood Type")).toHaveText(dataObject.bloodType)
-        expect(await this.page.locator("(//input[@placeholder='yyyy-mm-dd'])[2]").inputValue()).toBe(dataObject.birthDate)
+        expect(await this.page.locator("(//input[@placeholder='yyyy-dd-mm'])[2]").inputValue()).toBe(dataObject.birthDate)
         await expect(this.page.locator(`//label[text()="${dataObject.gender}"]/span[contains(@class,"oxd-radio-input")]`)).toBeChecked()
     }
 
