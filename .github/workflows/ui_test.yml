@@ -32,7 +32,7 @@ jobs:
          
       # Execute playwright test
       - name: Run playwright test
-        run: npx playwright test
+        run: npx playwright test --headed
 
       # Upload test report
       - uses: actions/upload-artifact@v3
